@@ -1,0 +1,170 @@
+:root {
+  --ink: #1f2430;
+  --muted: #5b6475;
+  --line: #e3e6ee;
+  --brand: #0f8a6a;
+  --brand-dark: #0b6b52;
+  --surface: #ffffff;
+  --page: #f6f7fb;
+  --error: #c62f4b;
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  color: var(--ink);
+  background: var(--page);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+a {
+  color: var(--brand);
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+}
+
+.site-header nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 20px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--brand);
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: var(--brand-dark);
+}
+
+.button-small {
+  padding: 8px 14px;
+}
+
+.hero {
+  padding: 32px 0;
+}
+
+.hero h1 {
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  margin: 0 0 12px;
+}
+
+.hero p {
+  color: var(--muted);
+  font-size: 1.1rem;
+  max-width: 560px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin: 12px 0 6px;
+}
+
+input,
+select {
+  width: 100%;
+  max-width: 320px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font: inherit;
+}
+
+input[type='radio'] {
+  width: auto;
+  margin-right: 8px;
+}
+
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 12px 0;
+}
+
+fieldset label {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+}
+
+.result {
+  font-size: 1.2rem;
+  margin-top: 16px;
+}
+
+.hint {
+  color: var(--muted);
+}
+
+.error {
+  color: var(--error);
+  margin: 4px 0 0;
+}
+
+form .button {
+  margin-top: 20px;
+}
+
+.environment-banner {
+  margin: 0;
+  padding: 8px 16px;
+  background: #fff4d6;
+  color: #6b4a00;
+  text-align: center;
+  font-weight: 600;
+}
+
+.site-footer {
+  text-align: center;
+  color: var(--muted);
+  padding: 24px 16px;
+}
