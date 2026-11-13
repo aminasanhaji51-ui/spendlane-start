@@ -10,6 +10,11 @@ describe('validateDemoForm', () => {
     const errors = validateDemoForm({ fullName: 'Karim Haddad', email: 'karim@', companySize: '11-50' });
     expect(errors.email).toBe('Enter a valid work email.');
   });
+
+  it('requires a company size', () => {
+    const errors = validateDemoForm({ fullName: 'Karim Haddad', email: 'karim@northwind.io', companySize: '' });
+    expect(errors).toEqual({ companySize: 'Choose your company size.' });
+  });
 });
 
 describe('salesCalendarUrl', () => {
